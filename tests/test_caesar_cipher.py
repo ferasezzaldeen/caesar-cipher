@@ -19,3 +19,7 @@ def test_encrypt_capital():
 #encryption should allow non-alpha characters but ignore them, including white space
 def test_encrypt_SPECIAL():
     assert encrypt('ABC',2)=='cde'
+
+#ecrypt encrypted version of It was the best of times, it was the worst of times. WITHOUT knowing the shift used.
+def test_crack():
+    assert crack(encrypt('It was the best of times, it was the worst of times.',15))=='it was the best of times, it was the worst of times.'
